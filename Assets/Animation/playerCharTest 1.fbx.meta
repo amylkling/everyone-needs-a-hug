@@ -331,6 +331,7 @@ ModelImporter:
     4300066: Kling_Amy_assignment4:hips_geo
     7400000: Run2
     7400002: Walk2
+    7400004: Dodge
     9500000: //RootNode
     13700000: Kling_Amy_assignment4:foot_L_geo 1
     13700002: Kling_Amy_assignment4:foot_R_geo 1
@@ -787,6 +788,336 @@ ModelImporter:
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kling_Amy_assignment4:geo_group
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:arm_l_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:arm_l_geoGroup/Kling_Amy_assignment4:forearm_L_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:arm_l_geoGroup/Kling_Amy_assignment4:upperarm_L_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:arm_r_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:arm_r_geoGroup/Kling_Amy_assignment4:forearm_R_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:arm_r_geoGroup/Kling_Amy_assignment4:upperarm_R_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group/Kling_Amy_assignment4:R_fingerinner_a_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group/Kling_Amy_assignment4:R_fingerinner_b_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group/Kling_Amy_assignment4:R_fingerinner_b_geo1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group/Kling_Amy_assignment4:R_fingerouter_a_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group/Kling_Amy_assignment4:R_fingerouter_b_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group/Kling_Amy_assignment4:R_fingerouter_b_geo1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group/Kling_Amy_assignment4:R_palm_R_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group/Kling_Amy_assignment4:R_thumbinner_a_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group/Kling_Amy_assignment4:R_thumbinner_a_geo1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_L_group/Kling_Amy_assignment4:R_thumbinner_b_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group/Kling_Amy_assignment4:R_fingerinner_a_geo
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group/Kling_Amy_assignment4:R_fingerinner_b_geo
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group/Kling_Amy_assignment4:R_fingerinner_b_geo1
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group/Kling_Amy_assignment4:R_fingerouter_a_geo
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group/Kling_Amy_assignment4:R_fingerouter_b_geo
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group/Kling_Amy_assignment4:R_fingerouter_b_geo1
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group/Kling_Amy_assignment4:R_palm_R_geo
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group/Kling_Amy_assignment4:R_thumbinner_a_geo
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group/Kling_Amy_assignment4:R_thumbinner_a_geo1
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:arms_geoGroup/Kling_Amy_assignment4:hand_R_group/Kling_Amy_assignment4:R_thumbinner_b_geo
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:foot_L_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:foot_L_geoGroup/Kling_Amy_assignment4:foot_L_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:foot_L_geoGroup/Kling_Amy_assignment4:foot_L_geo/Kling_Amy_assignment4:foot_L_geo
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:foot_R_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:foot_R_geoGroup/Kling_Amy_assignment4:foot_R_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:foot_R_geoGroup/Kling_Amy_assignment4:foot_R_geo/Kling_Amy_assignment4:foot_R_geo
+          1
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:leg_L_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:leg_L_geoGroup/Kling_Amy_assignment4:lowerleg_L_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:leg_L_geoGroup/Kling_Amy_assignment4:upperleg_L_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:leg_R_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:leg_R_geoGroup/Kling_Amy_assignment4:lowerleg_R_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:legs_geoGroup/Kling_Amy_assignment4:leg_R_geoGroup/Kling_Amy_assignment4:upperleg_R_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:trunk_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:trunk_geoGroup/Kling_Amy_assignment4:head_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:trunk_geoGroup/Kling_Amy_assignment4:head_geoGroup/Kling_Amy_assignment4:head_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:trunk_geoGroup/Kling_Amy_assignment4:hips_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:trunk_geoGroup/Kling_Amy_assignment4:hips_geoGroup/Kling_Amy_assignment4:hips_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:trunk_geoGroup/Kling_Amy_assignment4:neck_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:trunk_geoGroup/Kling_Amy_assignment4:neck_geoGroup/Kling_Amy_assignment4:neck_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:trunk_geoGroup/Kling_Amy_assignment4:torso_geoGroup
+        weight: 0
+      - path: Kling_Amy_assignment4:geo_group/Kling_Amy_assignment4:proxy_geoGroup/Kling_Amy_assignment4:trunk_geoGroup/Kling_Amy_assignment4:torso_geoGroup/Kling_Amy_assignment4:torso_geo
+        weight: 0
+      - path: Kling_Amy_assignment4:rig
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_lKneeCurveJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_lKneeCurveJ/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_lKneeCurveJ/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_lKneeCurveJ/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_lKneeCurveJ/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ3/Kling_Amy_assignment4:rig_SH_lAnkleJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_lKneeCurveJ/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ3/Kling_Amy_assignment4:rig_SH_lAnkleJ/Kling_Amy_assignment4:rig_SH_lBallJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_lHipCurveJ/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_lKneeCurveJ/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerLegCurveJ3/Kling_Amy_assignment4:rig_SH_lAnkleJ/Kling_Amy_assignment4:rig_SH_lBallJ/Kling_Amy_assignment4:rig_SH_lToeJ
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_rKneeCurveJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_rKneeCurveJ/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_rKneeCurveJ/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_rKneeCurveJ/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_rKneeCurveJ/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ3/Kling_Amy_assignment4:rig_SH_rAnkleJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_rKneeCurveJ/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ3/Kling_Amy_assignment4:rig_SH_rAnkleJ/Kling_Amy_assignment4:rig_SH_rBallJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_rHipCurveJ/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperLegCurveJ3/Kling_Amy_assignment4:rig_SH_rKneeCurveJ/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerLegCurveJ3/Kling_Amy_assignment4:rig_SH_rAnkleJ/Kling_Amy_assignment4:rig_SH_rBallJ/Kling_Amy_assignment4:rig_SH_rToeJ
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger1J1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger1J1/Kling_Amy_assignment4:rig_SH_lFinger1J2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger1J1/Kling_Amy_assignment4:rig_SH_lFinger1J2/Kling_Amy_assignment4:rig_SH_lFinger1J3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger1J1/Kling_Amy_assignment4:rig_SH_lFinger1J2/Kling_Amy_assignment4:rig_SH_lFinger1J3/Kling_Amy_assignment4:rig_SH_lFinger1JTip
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger2J1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger2J1/Kling_Amy_assignment4:rig_SH_lFinger2J2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger2J1/Kling_Amy_assignment4:rig_SH_lFinger2J2/Kling_Amy_assignment4:rig_SH_lFinger2J3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger2J1/Kling_Amy_assignment4:rig_SH_lFinger2J2/Kling_Amy_assignment4:rig_SH_lFinger2J3/Kling_Amy_assignment4:rig_SH_lFinger2JTip
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger3J1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger3J1/Kling_Amy_assignment4:rig_SH_lFinger3J2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger3J1/Kling_Amy_assignment4:rig_SH_lFinger3J2/Kling_Amy_assignment4:rig_SH_lFinger3J3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lPalmJ/Kling_Amy_assignment4:rig_SH_lFinger3J1/Kling_Amy_assignment4:rig_SH_lFinger3J2/Kling_Amy_assignment4:rig_SH_lFinger3J3/Kling_Amy_assignment4:rig_SH_lFinger3JTip
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lThumbJ1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lThumbJ1/Kling_Amy_assignment4:rig_SH_lThumbJ2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lThumbJ1/Kling_Amy_assignment4:rig_SH_lThumbJ2/Kling_Amy_assignment4:rig_SH_lThumbJ3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_lClavicleJ/Kling_Amy_assignment4:rig_SH_lShoulderCurveJ/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_lUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_lElbowCurveJ/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_lLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_lWristJ/Kling_Amy_assignment4:rig_SH_lThumbJ1/Kling_Amy_assignment4:rig_SH_lThumbJ2/Kling_Amy_assignment4:rig_SH_lThumbJ3/Kling_Amy_assignment4:rig_SH_lThumbJTip
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_Neck01J
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_Neck01J/Kling_Amy_assignment4:rig_SH_Neck02J
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_Neck01J/Kling_Amy_assignment4:rig_SH_Neck02J/Kling_Amy_assignment4:rig_SH_HeadJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_Neck01J/Kling_Amy_assignment4:rig_SH_Neck02J/Kling_Amy_assignment4:rig_SH_HeadJ/Kling_Amy_assignment4:rig_SH_HeadTipJ
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_Neck01J/Kling_Amy_assignment4:rig_SH_Neck02J/Kling_Amy_assignment4:rig_SH_HeadJ/Kling_Amy_assignment4:rig_SH_JawJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_Neck01J/Kling_Amy_assignment4:rig_SH_Neck02J/Kling_Amy_assignment4:rig_SH_HeadJ/Kling_Amy_assignment4:rig_SH_JawJ/Kling_Amy_assignment4:rig_SH_JawTipJ
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_Neck01J/Kling_Amy_assignment4:rig_SH_Neck02J/Kling_Amy_assignment4:rig_SH_HeadJ/Kling_Amy_assignment4:rig_SH_lEyeJ
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_Neck01J/Kling_Amy_assignment4:rig_SH_Neck02J/Kling_Amy_assignment4:rig_SH_HeadJ/Kling_Amy_assignment4:rig_SH_rEyeJ
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger1J1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger1J1/Kling_Amy_assignment4:rig_SH_rFinger1J2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger1J1/Kling_Amy_assignment4:rig_SH_rFinger1J2/Kling_Amy_assignment4:rig_SH_rFinger1J3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger1J1/Kling_Amy_assignment4:rig_SH_rFinger1J2/Kling_Amy_assignment4:rig_SH_rFinger1J3/Kling_Amy_assignment4:rig_SH_rFinger1JTip
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger2J1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger2J1/Kling_Amy_assignment4:rig_SH_rFinger2J2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger2J1/Kling_Amy_assignment4:rig_SH_rFinger2J2/Kling_Amy_assignment4:rig_SH_rFinger2J3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger2J1/Kling_Amy_assignment4:rig_SH_rFinger2J2/Kling_Amy_assignment4:rig_SH_rFinger2J3/Kling_Amy_assignment4:rig_SH_rFinger2JTip
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger3J1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger3J1/Kling_Amy_assignment4:rig_SH_rFinger3J2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger3J1/Kling_Amy_assignment4:rig_SH_rFinger3J2/Kling_Amy_assignment4:rig_SH_rFinger3J3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rPalmJ/Kling_Amy_assignment4:rig_SH_rFinger3J1/Kling_Amy_assignment4:rig_SH_rFinger3J2/Kling_Amy_assignment4:rig_SH_rFinger3J3/Kling_Amy_assignment4:rig_SH_rFinger3JTip
+        weight: 0
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rThumbJ1
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rThumbJ1/Kling_Amy_assignment4:rig_SH_rThumbJ2
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rThumbJ1/Kling_Amy_assignment4:rig_SH_rThumbJ2/Kling_Amy_assignment4:rig_SH_rThumbJ3
+        weight: 1
+      - path: Kling_Amy_assignment4:rig/Kling_Amy_assignment4:rig_MainC/Kling_Amy_assignment4:rig_SH_ROOTJ/Kling_Amy_assignment4:rig_SH_Spine01J/Kling_Amy_assignment4:rig_SH_Spine02J/Kling_Amy_assignment4:rig_SH_Spine03J/Kling_Amy_assignment4:rig_SH_SpineTopJ/Kling_Amy_assignment4:rig_SH_rClavicleJ/Kling_Amy_assignment4:rig_SH_rShoulderCurveJ/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ1/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ2/Kling_Amy_assignment4:rig_SH_rUpperArmCurveJ3/Kling_Amy_assignment4:rig_SH_rElbowCurveJ/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ1/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ2/Kling_Amy_assignment4:rig_SH_rLowerArmCurveJ3/Kling_Amy_assignment4:rig_SH_rWristJ/Kling_Amy_assignment4:rig_SH_rThumbJ1/Kling_Amy_assignment4:rig_SH_rThumbJ2/Kling_Amy_assignment4:rig_SH_rThumbJ3/Kling_Amy_assignment4:rig_SH_rThumbJTip
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dodge
+      takeName: Take 001
+      firstFrame: 160
+      lastFrame: 185
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000

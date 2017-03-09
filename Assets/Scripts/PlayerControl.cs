@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
 	bool hugControl = true;					//so scripts can control when hugging happens
 	public bool groupHug;					//for activating the finishing move
 	bool finishThem = false;				//so the groupHug only activates when all enemies are down
+	bool dodge = false;						//for activating dodging
 
 
 
@@ -52,15 +53,8 @@ public class PlayerControl : MonoBehaviour
 			m_Jump = CrossPlatformInputManager.GetButtonDown ("Jump");
 		}*/
 
-		//grouphug input
-		if (CrossPlatformInputManager.GetButtonDown("Jump") && finishThem)
-		{
-			groupHug = true;
-		}
-		else
-		{
-			groupHug = false;
-		}
+
+
 	}
 
 
@@ -80,7 +74,27 @@ public class PlayerControl : MonoBehaviour
 		{
 			hug = false;
 		}
-			
+
+		//grouphug input
+		if (CrossPlatformInputManager.GetButtonDown("Jump") && finishThem)
+		{
+			groupHug = true;
+		}
+		else
+		{
+			groupHug = false;
+		}
+
+		//dodge input
+		if(CrossPlatformInputManager.GetButtonDown("Dodge"))
+		{
+			dodge = true;
+		}
+		else
+		{
+			dodge = false;
+		}
+
 
 		// calculate move direction to pass to character
 		/*if (m_Cam != null)
@@ -101,7 +115,7 @@ public class PlayerControl : MonoBehaviour
 		#endif
 
 		// pass all parameters to the character control script
-		m_Character.Move (m_Move, hug, groupHug, hugTarget); //changed crouch to hug and jump to groupHug and added hugTarget
+		m_Character.Move (m_Move, hug, groupHug, hugTarget, dodge); //changed crouch to hug and jump to groupHug and added hugTarget and dodge
 		//m_Jump = false;
 	}
 

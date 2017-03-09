@@ -40,6 +40,9 @@ public class PlayerCharacter : MonoBehaviour
 	[SerializeField] float disengageTime = .5f;				//how long it takes for a hug to cancel once the enemy is incapacitated
 	public bool hugEngaged;									//determines if the player has latched onto an enemy or not
 	bool m_GroupHug;										//activates the group hug animation
+	bool m_Dodging;											//controls when the collider gets modified when dodging
+	[SerializeField] float m_DodgeRadiusModifier = 1.5f;	//the amount to divide the radius of the collider by when dodging
+	[SerializeField] float m_DodgeCenterModifier = .5f;		//the amount to subtract the collider's center's z axis by when dodging
 
 
 	void Start()
@@ -56,7 +59,7 @@ public class PlayerCharacter : MonoBehaviour
 	}
 
 
-	public void Move(Vector3 move, bool hug, bool groupHug, GameObject hugTarget) //changed crouch to hug and jump to groupHug
+	public void Move(Vector3 move, bool hug, bool groupHug, GameObject hugTarget, bool dodge) //changed crouch to hug and jump to groupHug
 	{
 
 		// convert the world relative moveInput vector into a local-relative
@@ -71,6 +74,7 @@ public class PlayerCharacter : MonoBehaviour
 
 		//new functions
 		HuggingStance(hug, hugTarget);
+		Dodging(dodge);
 		Finisher(groupHug);
 
 		ApplyExtraTurnRotation(hug);
@@ -198,6 +202,37 @@ public class PlayerCharacter : MonoBehaviour
 
 	}
 
+	//make dodging happen
+	void Dodging(bool dodge)
+	{
+		//change capsule collider's size and position upon dodging
+		if (dodge)
+		{
+			//make sure the collider is only changed once, then initiate the dodge
+			if(m_Dodging)
+			{
+				//dodge
+				return;
+			}
+
+			Vector3 center = m_Capsule.center;
+			center.z = center.z - m_DodgeCenterModifier;
+
+			m_Capsule.center = center;
+			m_Capsule.radius = m_Capsule.radius / m_DodgeRadiusModifier;
+
+			m_Dodging = true;
+		}
+		else
+		{
+			//reset everything
+			m_Capsule.center = m_CapsuleCenter;
+			m_Capsule.radius = m_CapsuleRadius;
+			m_Capsule.height = m_CapsuleHeight;
+			m_Dodging = false;
+		}
+	}
+
 	//executes the finishing move, Group hug
 	void Finisher(bool groupHug)
 	{
@@ -234,6 +269,7 @@ public class PlayerCharacter : MonoBehaviour
 		//control the hugging animations
 		m_Animator.SetBool("Hug", m_Hugging);
 		m_Animator.SetBool("GroupHug", m_GroupHug);
+		m_Animator.SetBool("Dodge", m_Dodging);
 
 		//don't need this
 		#region jumping related code
