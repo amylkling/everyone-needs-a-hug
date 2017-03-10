@@ -23,12 +23,12 @@ public class EnemyUIDirectControl : MonoBehaviour {
 			Debug.Log ("enemyBody doesn't exist!");
 			Destroy (gameObject);
 		}
-		/*
+
 		//or deactivates the health bar if the enemy is deactivated
 		else if (enemyScript.isActiveAndEnabled == false)
 		{
 			gameObject.SetActive (false);
 		}
-		*/
+
 	}
 }

@@ -24,7 +24,7 @@ public class EnemyUI : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		//initialize and instantiate
-		canvas = Canvas.FindObjectOfType<Canvas>();
+		canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
 		enemyScript = gameObject.GetComponent<Enemy>();
 		healthPanel = Instantiate(healthPrefab) as GameObject;
 		healthPanel.transform.SetParent(canvas.transform, false);
