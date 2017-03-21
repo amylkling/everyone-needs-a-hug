@@ -33,6 +33,7 @@ public class Huggles : MonoBehaviour {
 		//when an enemy has been locked on to, drain its stamina
 		if (hugSnap && enemy != null)
 		{
+			enemy.Hugged = true;
 			enemy.TakeDmg(staminaDrainRate * Time.deltaTime);
 			gameObject.GetComponent<PlayerControl>().FinishThem(false);
 		}
@@ -42,6 +43,7 @@ public class Huggles : MonoBehaviour {
 		}
 		else
 		{
+			enemy.Hugged = false;
 			gameObject.GetComponent<PlayerControl>().FinishThem(false);
 		}
 
