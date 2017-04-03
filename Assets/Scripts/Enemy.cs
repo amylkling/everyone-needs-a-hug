@@ -8,14 +8,14 @@ public class Enemy : MonoBehaviour {
 	public int minHealth = 0;
 	public int maxHealth = 50;
 	public float health;
-	private bool dead;
+	[SerializeField]private bool dead;
 	public Slider healthBar;
 	public EnemyUI uiScript;
 	public EnemyUIDirectControl uiControl;
 	private bool finished = false;
 	private bool hugged = false;
 
-	public float pullInSpeed = 2f;
+	public float pullInSpeed = 4f;
 	public float pullOffsetX = 1f;
 	public float pullOffsetZ = 1f;
 	public float minShakeRotation = 5f;
@@ -68,8 +68,17 @@ public class Enemy : MonoBehaviour {
 			transform.LookAt(player.transform.position);
 			float step = pullInSpeed * Time.deltaTime;
 			Vector3 newPos = new Vector3(player.transform.position.x, transform.position.y, 
-				player.transform.position.z - pullOffsetZ);
-			transform.position = Vector3.Lerp(transform.position, newPos, step);
+				player.transform.position.z + pullOffsetZ);
+			//transform.position = Vector3.Lerp(transform.position, newPos, step);
+			if (Vector3.Distance(transform.position, player.transform.position) > pullOffsetZ + 0.5f)
+			{
+				transform.position = Vector3.MoveTowards(transform.position, newPos, step);
+				Debug.Log(Vector3.Distance(transform.position, player.transform.position));
+			}
+			else
+			{
+				Destroy(gameObject);
+			}
 
 			/*
 			RaycastHit hit;

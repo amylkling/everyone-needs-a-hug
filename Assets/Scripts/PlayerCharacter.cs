@@ -205,23 +205,27 @@ public class PlayerCharacter : MonoBehaviour
 	//make dodging happen
 	void Dodging(bool dodge)
 	{
-		//change capsule collider's size and position upon dodging
+		//allow the animation to play
 		if (dodge)
 		{
-			//make sure the collider is only changed once, then initiate the dodge
-			if(m_Dodging)
-			{
-				//dodge
-				return;
-			}
+			m_Dodging = true;
+		}
+		else
+		{
 
+			m_Dodging = false;
+		}
+
+		AnimatorStateInfo state = m_Animator.GetCurrentAnimatorStateInfo(0);
+
+		//change capsule collider's size and position upon dodging
+		if (state.IsName("Dodging"))
+		{
 			Vector3 center = m_Capsule.center;
 			center.z = center.z - m_DodgeCenterModifier;
 
 			m_Capsule.center = center;
 			m_Capsule.radius = m_Capsule.radius / m_DodgeRadiusModifier;
-
-			m_Dodging = true;
 		}
 		else
 		{
@@ -229,7 +233,6 @@ public class PlayerCharacter : MonoBehaviour
 			m_Capsule.center = m_CapsuleCenter;
 			m_Capsule.radius = m_CapsuleRadius;
 			m_Capsule.height = m_CapsuleHeight;
-			m_Dodging = false;
 		}
 	}
 
