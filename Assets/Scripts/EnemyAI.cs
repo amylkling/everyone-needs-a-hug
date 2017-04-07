@@ -30,6 +30,10 @@ public class EnemyAI : MonoBehaviour
 	public float coolDownTime = 5f;
 	private bool pathPlacement = true;
 	private bool attEngage = true;
+	bool smooched = false;
+	private float smoochTimer = 0f;
+	public float smoochEffectTime = 3f;
+	private bool iLeap = false;
 
 
 	// Use this for initialization
@@ -40,66 +44,153 @@ public class EnemyAI : MonoBehaviour
 		backOffTimer = backOffTime;
 		baseCol = GetComponent<Renderer>().material.color;
 		coolTimer = coolDownTime;
+		smoochTimer = smoochEffectTime;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		//ensure the enemy is always facing the player when not in a hug
-		if (!GetComponent<Enemy>().Hugged)
+		if (!GetComponent<Enemy>().Dead)
 		{
-			transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
-		}
+			if (!smooched)
+			{
+				//ensure the enemy is always facing the player when not in a hug
+				if (!GetComponent<Enemy>().Hugged)
+				{
+					transform.LookAt (new Vector3 (player.transform.position.x, transform.position.y, player.transform.position.z));
+				}
 
-		//move to/follow the player
-		if (moveIn && !GetComponent<Enemy>().Dead)
-		{
-			agent.SetDestination(player.transform.position);
-		}
+				//move to/follow the player
+				if (moveIn)
+				{
+					agent.SetDestination(player.transform.position);
+				}
 
-		float dist = Vector3.Distance(transform.position, player.transform.position);
+				float dist = Vector3.Distance(transform.position, player.transform.position);
 
-		//Debug.Log(dist);
+				//Debug.Log(dist);
 
-		//recalculate leap path, unless already leaping
-		if(pathPlacement)
-		{
-			Debug.Log("YOU'RE MINE NOW!");
-			Vector3 newPos = Vector3.Lerp(transform.position, player.transform.position, 0.5f);
-			GetComponent<iTweenPath>().nodes[0] = transform.position;
-			GetComponent<iTweenPath>().nodes[1] = new Vector3(newPos.x, 3f, newPos.z);
-			GetComponent<iTweenPath>().nodes[2] = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-		}
+				//recalculate leap path, unless already leaping
+				if (pathPlacement)
+				{
+					Debug.Log("YOU'RE MINE NOW!");
+					Vector3 newPos = Vector3.Lerp(transform.position, player.transform.position, 0.5f);
+					GetComponent<iTweenPath>().nodes [0] = transform.position;
+					GetComponent<iTweenPath>().nodes [1] = new Vector3(newPos.x, 3f, newPos.z);
+					GetComponent<iTweenPath>().nodes [2] = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+				}
 
 
-		//when it gets in range, start preparing to attack
-		if (dist > attackDistLow && dist <= attackDistHigh && attEngage)
-		{
-			//agent.Stop();
-			agent.enabled = false;
-			moveIn = false;
-			navEngage = false;
-			/*call attack function to "charge" a leap attack
-			 *with flashing color that gets faster as a timer goes down
-			 *Then call the actual attack function
-			 *that makes it leap at the player and then stay still for a short time*/
-			curPos = transform.position;
-			ChargeUp();
-			//agent.Resume();
-		}
+				//when it gets in range, start preparing to attack
+				if (dist > attackDistLow && dist <= attackDistHigh && attEngage)
+				{
+					//agent.Stop();
+					agent.enabled = false;
+					moveIn = false;
+					navEngage = false;
+					/*call attack function to "charge" a leap attack
+				 	*with flashing color that gets faster as a timer goes down
+			 		*Then call the actual attack function
+					 *that makes it leap at the player and then stay still for a short time*/
+					//curPos = transform.position;
+					ChargeUp();
+					//agent.Resume();
+				}
 
-		//when the leap is done, call activateNav
-		if (V3Equal(transform.position, GetComponent<iTweenPath>().nodes[2]))
-		{
-			Debug.Log("called it");
-			activateNav();
-		}
+				//when the leap is done, call activateNav
+				if (V3Equal(transform.position, GetComponent<iTweenPath>().nodes [2]) && iLeap)
+				{
+					Debug.Log("called it");
+					activateNav();
+				}
 
-		//reactivate navigation
-		if (navEngage)
-		{
-			agent.enabled = true;
-			moveIn = true;
+				//reactivate navigation
+				if (navEngage)
+				{
+					agent.enabled = true;
+					moveIn = true;
+				}
+
+				//wait a certain amount of time before moving in to attack again
+				if (backOff)
+				{
+					backOffTimer -= Time.deltaTime;
+					if (backOffTimer <= 0)
+					{
+						backOffTimer = backOffTime;
+						agent.Resume();
+						moveIn = true;
+						backOff = false;
+					}
+				}
+
+				//leap cooldown
+				if (theLoop)
+				{
+					coolTimer -= Time.deltaTime;
+					//Debug.Log("Timer: " + coolTimer);
+					if (coolTimer <= 0)
+					{
+						attEngage = true;
+						navEngage = true;
+						coolTimer = coolDownTime;
+						theLoop = false;
+					}
+				}
+
+
+				if (chargeUp)
+				{
+					chargeTimer -= Time.deltaTime;
+					if (chargeTimer <= chargeTime && chargeTimer > firstThreshold)
+					{
+						//flash at a slow speed
+						//Debug.Log("Time: " + chargeTimer + " HRAA-");
+						ChargeUp("slow", 1.5f);
+						//Debug.Log("HRAA-");
+					} 
+					else if (chargeTimer <= firstThreshold && chargeTimer > secondThreshold)
+					{
+						//flash at a faster speed
+						//iTween.ColorTo(gameObject, flashCol, 1f);
+						//Debug.Log("Time: " + chargeTimer + " -AAAAA-");
+						ChargeUp("faster", 1f);
+						//Debug.Log("-AAAAA-");
+					} 
+					else if (chargeTimer <= secondThreshold && chargeTimer > 0)
+					{
+						//flash at fastest speed
+						//iTween.ColorTo(gameObject, flashCol, 0.5f);
+						//Debug.Log("Time: " + chargeTimer + " -AAAAAAAAAAAA");
+						ChargeUp("fastest", 0.5f);
+						//Debug.Log("-AAAAAAAAAAAA");
+					} 
+					else if (chargeTimer <= 0)
+					{
+						chargeUp = false;
+						chargeTimer = chargeTime;
+						Attack();
+					}
+				}
+			} 
+			else
+			{
+				if (agent.isActiveAndEnabled)
+				{
+					agent.Stop();
+				}
+
+				smoochTimer -= Time.deltaTime;
+				if (smoochTimer <= 0)
+				{
+					smooched = false;
+					smoochTimer = smoochEffectTime;
+					if (agent.isActiveAndEnabled)
+					{
+						agent.Resume();
+					}
+				}
+			}
 		}
 
 		/*
@@ -130,67 +221,6 @@ public class EnemyAI : MonoBehaviour
 			agent.Resume();
 			moveIn = true;
 		}*/
-
-		//wait a certain amount of time before moving in to attack again
-		if (backOff)
-		{
-			backOffTimer -= Time.deltaTime;
-			if (backOffTimer <= 0)
-			{
-				backOffTimer = backOffTime;
-				agent.Resume();
-				moveIn = true;
-				backOff = false;
-			}
-		}
-
-		//leap cooldown
-		if (theLoop)
-		{
-			coolTimer -= Time.deltaTime;
-			Debug.Log("Timer: " + coolTimer);
-			if (coolTimer <= 0)
-			{
-				attEngage = true;
-				navEngage = true;
-				coolTimer = coolDownTime;
-				theLoop = false;
-			}
-		}
-
-		if(chargeUp)
-		{
-			chargeTimer -= Time.deltaTime;
-			if (chargeTimer <= chargeTime && chargeTimer > firstThreshold)
-			{
-				//flash at a slow speed
-				//Debug.Log("Time: " + chargeTimer + " HRAA-");
-				ChargeUp("slow", 1.5f);
-				//Debug.Log("HRAA-");
-			}
-			else if (chargeTimer <= firstThreshold && chargeTimer > secondThreshold)
-			{
-				//flash at a faster speed
-				//iTween.ColorTo(gameObject, flashCol, 1f);
-				//Debug.Log("Time: " + chargeTimer + " -AAAAA-");
-				ChargeUp("faster", 1f);
-				//Debug.Log("-AAAAA-");
-			}
-			else if (chargeTimer <= secondThreshold && chargeTimer > 0)
-			{
-				//flash at fastest speed
-				//iTween.ColorTo(gameObject, flashCol, 0.5f);
-				//Debug.Log("Time: " + chargeTimer + " -AAAAAAAAAAAA");
-				ChargeUp("fastest", 0.5f);
-				//Debug.Log("-AAAAAAAAAAAA");
-			}
-			else if (chargeTimer <= 0)
-			{
-				chargeUp = false;
-				chargeTimer = chargeTime;
-				Attack();
-			}
-		}
 			
 	}
 
@@ -207,15 +237,15 @@ public class EnemyAI : MonoBehaviour
 		switch(howFast)
 		{
 			case "slow":
-				Debug.Log("slow" + Time.time);
+				//Debug.Log("slow" + Time.time);
 				iTween.ColorTo(gameObject, flashCol, speed);
 				return;
 			case "faster":
-				Debug.Log("faster" + Time.time);
+				//Debug.Log("faster" + Time.time);
 				iTween.ColorTo(gameObject, flashCol, speed);
 				return;
 			case "fastest":
-				Debug.Log("fastest" + Time.time);
+				//Debug.Log("fastest" + Time.time);
 				iTween.ColorTo(gameObject, flashCol, speed);
 				return;
 		}
@@ -232,6 +262,7 @@ public class EnemyAI : MonoBehaviour
 			pathPlacement = false;
 			//iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumper"), "time", 2f, "easetype", iTween.EaseType.linear, "oncomplete", "activateNav", "oncompletetarget", gameObject, "looptype", iTween.LoopType.none));
 			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumper"), "time", 2f, "easetype", iTween.EaseType.linear, "looptype", iTween.LoopType.none));
+			iLeap = true;
 		}
 
 	}
@@ -242,6 +273,7 @@ public class EnemyAI : MonoBehaviour
 		Debug.Log("stahp");
 		theLoop = true;
 		pathPlacement = true;
+		iLeap = false;
 	}
 
 	//compare two vector3's
@@ -249,6 +281,19 @@ public class EnemyAI : MonoBehaviour
 	{
 		//Debug.Log("sqr mag: " + Vector3.SqrMagnitude(a - b));
 		return Vector3.SqrMagnitude(a - b) < 0.1;
+	}
+
+	//for other scripts to set kissie
+	public void Smooch(bool b)
+	{
+		smooched = b;
+	}
+
+	//detect when a blown kiss hits the enemy
+	void OnParticleCollision(GameObject e)
+	{
+		Smooch(true);
+		Destroy(e);
 	}
 
 	/*void OnCollisionEnter(Collision col)

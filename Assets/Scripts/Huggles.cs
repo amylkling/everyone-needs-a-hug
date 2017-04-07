@@ -36,15 +36,18 @@ public class Huggles : MonoBehaviour {
 			enemy.Hugged = true;
 			enemy.TakeDmg(staminaDrainRate * Time.deltaTime);
 			gameObject.GetComponent<PlayerControl>().FinishThem(false);
+			gameObject.GetComponent<PlayerControl>().Kissie(false);
 		}
 		else if (enemy == null)
 		{
 			gameObject.GetComponent<PlayerControl>().FinishThem(true);
+			gameObject.GetComponent<PlayerControl>().Kissie(false);
 		}
 		else
 		{
 			enemy.Hugged = false;
 			gameObject.GetComponent<PlayerControl>().FinishThem(false);
+			gameObject.GetComponent<PlayerControl>().Kissie(true);
 		}
 
 		//timer for cancelling a hug if there is no target

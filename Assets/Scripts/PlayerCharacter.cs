@@ -43,6 +43,8 @@ public class PlayerCharacter : MonoBehaviour
 	bool m_Dodging;											//controls when the collider gets modified when dodging
 	[SerializeField] float m_DodgeRadiusModifier = 1.5f;	//the amount to divide the radius of the collider by when dodging
 	[SerializeField] float m_DodgeCenterModifier = .5f;		//the amount to subtract the collider's center's z axis by when dodging
+	public GameObject kissParticlePrefab;
+	GameObject kissParticle;
 
 
 	void Start()
@@ -59,7 +61,7 @@ public class PlayerCharacter : MonoBehaviour
 	}
 
 
-	public void Move(Vector3 move, bool hug, bool groupHug, GameObject hugTarget, bool dodge) //changed crouch to hug and jump to groupHug
+	public void Move(Vector3 move, bool hug, bool groupHug, GameObject hugTarget, bool dodge, bool blowKiss) //changed crouch to hug and jump to groupHug
 	{
 
 		// convert the world relative moveInput vector into a local-relative
@@ -76,6 +78,7 @@ public class PlayerCharacter : MonoBehaviour
 		HuggingStance(hug, hugTarget);
 		Dodging(dodge);
 		Finisher(groupHug);
+		BlowAKiss(blowKiss, hugTarget);
 
 		ApplyExtraTurnRotation(hug);
 
@@ -259,6 +262,24 @@ public class PlayerCharacter : MonoBehaviour
 		else
 		{
 			m_GroupHug = false;
+		}
+	}
+
+	void BlowAKiss(bool blowKiss, GameObject hugTarget)
+	{
+		//briefly turn off player movement
+		//face the enemy
+		//spawn a particle effect that travels to the enemy
+		//when it hits the enemy, immobilize them with a time limit
+		//restore player movement
+		if(blowKiss)
+		{
+			Debug.Log("Mwah!");
+			transform.LookAt (new Vector3 (hugTarget.transform.position.x, transform.position.y, hugTarget.transform.position.z));
+			GetComponent<PlayerControl>().PauseMe(true);
+			kissParticle = Instantiate(kissParticlePrefab,new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.rotation);
+			kissParticle.GetComponent<ParticleSystem>().Play();
+			GetComponent<PlayerControl>().PauseMe(false);
 		}
 	}
 

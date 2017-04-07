@@ -22,6 +22,11 @@ public class PlayerControl : MonoBehaviour
 	public bool groupHug;					//for activating the finishing move
 	bool finishThem = false;				//so the groupHug only activates when all enemies are down
 	bool dodge = false;						//for activating dodging
+	bool blowKiss = false;
+	bool kissie = false;
+	bool pauseMe = false;
+	private float h;
+	private float v;
 
 
 
@@ -61,39 +66,50 @@ public class PlayerControl : MonoBehaviour
 	// Fixed update is called in sync with physics
 	private void FixedUpdate ()
 	{
-		// read inputs
-		float h = CrossPlatformInputManager.GetAxis ("Horizontal");
-		float v = CrossPlatformInputManager.GetAxis ("Vertical");
 
-		//hug input
-		if (CrossPlatformInputManager.GetAxisRaw ("Fire3") != 0 && hugControl)
+		// read inputs when the player isn't paused
+		if(!pauseMe)
 		{
-			hug = true;
-		}
-		else
-		{
-			hug = false;
-		}
+			h = CrossPlatformInputManager.GetAxis ("Horizontal");
+			v = CrossPlatformInputManager.GetAxis ("Vertical");
 
+			//hug input
+			if (CrossPlatformInputManager.GetAxisRaw ("Fire3") != 0 && hugControl)
+			{
+				hug = true;
+			}
+			else
+			{
+				hug = false;
+			}
+
+			//dodge input
+			if(CrossPlatformInputManager.GetButtonDown("Dodge"))
+			{
+				dodge = true;
+			}
+			else
+			{
+				dodge = false;
+			}
+		}
+			
 		//grouphug input
 		if (CrossPlatformInputManager.GetButtonDown("Jump") && finishThem)
 		{
 			groupHug = true;
 		}
+		else if (CrossPlatformInputManager.GetButtonDown("Jump") && kissie)
+		{
+			blowKiss = true;
+		}
 		else
 		{
 			groupHug = false;
+			blowKiss = false;
 		}
 
-		//dodge input
-		if(CrossPlatformInputManager.GetButtonDown("Dodge"))
-		{
-			dodge = true;
-		}
-		else
-		{
-			dodge = false;
-		}
+
 
 
 		// calculate move direction to pass to character
@@ -115,7 +131,7 @@ public class PlayerControl : MonoBehaviour
 		#endif
 
 		// pass all parameters to the character control script
-		m_Character.Move (m_Move, hug, groupHug, hugTarget, dodge); //changed crouch to hug and jump to groupHug and added hugTarget and dodge
+		m_Character.Move (m_Move, hug, groupHug, hugTarget, dodge, blowKiss); //changed crouch to hug and jump to groupHug and added hugTarget and dodge and blowKiss
 		//m_Jump = false;
 	}
 
@@ -129,6 +145,18 @@ public class PlayerControl : MonoBehaviour
 	public void FinishThem(bool b)
 	{
 		finishThem = b;
+	}
+
+	//for other scripts to set kissie
+	public void Kissie(bool b)
+	{
+		kissie = b;
+	}
+
+	//for other scripts to set pauseMe
+	public void PauseMe(bool b)
+	{
+		pauseMe = b;
 	}
 }
 
