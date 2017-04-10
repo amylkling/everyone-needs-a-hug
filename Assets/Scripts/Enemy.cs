@@ -21,6 +21,12 @@ public class Enemy : MonoBehaviour {
 	public float minShakeRotation = 5f;
 	public float maxShakeRotation = 105f;
 	public float shakeSpeed = 2f;
+	public Slider gHugMeter;
+	//public int gHugIncrease = 25;
+	private bool deadNow = false;
+	public GameControl gm;
+	public float score = 100f;
+	EnemyWeapon weapon;
 	#endregion
 	
 	#region Start
@@ -32,6 +38,12 @@ public class Enemy : MonoBehaviour {
 		//healthBar = uiScript.healthSlider;
 		healthBar.maxValue = maxHealth;
 		uiControl = uiScript.uiScript;
+		gHugMeter = GameObject.Find("GroupHugMeter").GetComponent<Slider>();
+		gm = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GameControl>();
+		if(GetComponent<EnemyWeapon>() != null)
+		{
+			weapon = GetComponent<EnemyWeapon>();
+		}
 	}
 	#endregion
 	
@@ -51,9 +63,18 @@ public class Enemy : MonoBehaviour {
 		}
 
 		//do things when the enemy "dies"
-		if (dead)
+		if (deadNow)
 		{
-			Debug.Log("I don't want to fight you anymore");
+			Debug.Log(gameObject.name + ": I don't want to fight you anymore");
+			//gHugMeter.value += gHugIncrease;
+			gHugMeter.value += gHugMeter.maxValue/transform.parent.childCount;
+			gm.Scoreboard(score);
+			if (weapon != null)
+			{
+				weapon.enabled = false;
+			}
+			dead = true;
+			deadNow = false;
 			//Destroy (gameObject);
 		}
 
@@ -115,7 +136,7 @@ public class Enemy : MonoBehaviour {
 	//set the enemy's state to "dead"
 	void Death()
 	{
-		dead = true;
+		deadNow = true;
 	}
 	#endregion
 

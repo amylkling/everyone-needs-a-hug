@@ -45,6 +45,8 @@ public class PlayerCharacter : MonoBehaviour
 	[SerializeField] float m_DodgeCenterModifier = .5f;		//the amount to subtract the collider's center's z axis by when dodging
 	public GameObject kissParticlePrefab;
 	GameObject kissParticle;
+	public GameObject gHugParticlePrefab;
+	GameObject gHugParticle;
 
 
 	void Start()
@@ -254,10 +256,9 @@ public class PlayerCharacter : MonoBehaviour
 				e.GetComponent<Enemy>().Finished = true;
 			}
 
-			if (enemies == null)
-			{
-				GameObject.FindWithTag("Player").GetComponent<Huggles>().NoMore = false;
-			}
+			gHugParticle = Instantiate(gHugParticlePrefab, new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), Quaternion.identity);
+			gHugParticle.GetComponent<ParticleSystem>().Play();
+
 		}
 		else
 		{
@@ -409,6 +410,12 @@ public class PlayerCharacter : MonoBehaviour
 	public bool HugEngaged
 	{
 		get {return hugEngaged;}
+	}
+
+	//for other scripts to get gHugParticle
+	public GameObject GHugParticle
+	{
+		get {return gHugParticle;}
 	}
 }
 

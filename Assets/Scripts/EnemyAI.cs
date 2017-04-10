@@ -74,10 +74,10 @@ public class EnemyAI : MonoBehaviour
 				if (pathPlacement)
 				{
 					Debug.Log("YOU'RE MINE NOW!");
-					Vector3 newPos = Vector3.Lerp(transform.position, player.transform.position, 0.5f);
-					GetComponent<iTweenPath>().nodes [0] = transform.position;
+					Vector3 newPos = Vector3.Lerp(transform.position, player.transform.position - new Vector3(0.5f, 0, 0.5f), 0.5f);
+					GetComponent<iTweenPath>().nodes [0] = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
 					GetComponent<iTweenPath>().nodes [1] = new Vector3(newPos.x, 3f, newPos.z);
-					GetComponent<iTweenPath>().nodes [2] = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+					GetComponent<iTweenPath>().nodes [2] = new Vector3(player.transform.position.x - 0.5f, transform.position.y + 0.2f, player.transform.position.z - 0.5f);
 				}
 
 
@@ -239,15 +239,15 @@ public class EnemyAI : MonoBehaviour
 			case "slow":
 				//Debug.Log("slow" + Time.time);
 				iTween.ColorTo(gameObject, flashCol, speed);
-				return;
+				break;
 			case "faster":
 				//Debug.Log("faster" + Time.time);
 				iTween.ColorTo(gameObject, flashCol, speed);
-				return;
+				break;
 			case "fastest":
 				//Debug.Log("fastest" + Time.time);
 				iTween.ColorTo(gameObject, flashCol, speed);
-				return;
+				break;
 		}
 	}
 
