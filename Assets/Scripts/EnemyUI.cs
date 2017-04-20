@@ -19,6 +19,8 @@ public class EnemyUI : MonoBehaviour {
 	private Renderer selfRenderer;
 	private CanvasGroup canvasGroup;
 	public float viewRange = 15f;
+
+	private GameControl control;
 	
 
 	// Use this for initialization
@@ -40,6 +42,8 @@ public class EnemyUI : MonoBehaviour {
 		//this is purely so that this script can tell EnemyUIDirectControl script which enemy it is associated with
 		uiScript = healthPanel.GetComponent<EnemyUIDirectControl>();
 		uiScript.enemyScript = enemyScript;
+
+		control = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GameControl>();
 	
 	}
 	
@@ -52,11 +56,11 @@ public class EnemyUI : MonoBehaviour {
 		healthPanel.transform.position = new Vector3(screenPos.x, screenPos.y, screenPos.z);
 
 		//track camera distance and make the health bar invisible when the player is far enough away
-		float distance = (worldPos - Camera.main.transform.position).magnitude;
-		float alpha = viewRange - distance / 2.0f;
-		SetAlpha(alpha);
+		//float distance = (worldPos - Camera.main.transform.position).magnitude;
+		//float alpha = viewRange - distance / 2.0f;
+		//SetAlpha(alpha);
 
-		if (selfRenderer.isVisible)
+		if (selfRenderer.isVisible && !control.CheckGameOver)
 		{
 			healthPanel.SetActive(true);
 		}

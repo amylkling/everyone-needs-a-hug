@@ -6,13 +6,17 @@ public class EnemyWeapon : MonoBehaviour {
 
 	public float dmgAmount = 20f;
 	public bool constDmg = false;
+	public bool doDmg = true;
 
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.collider.gameObject.CompareTag("Player"))
 		{
 			Debug.Log("it's a direct hit!");
-			col.gameObject.GetComponent<PlayerHealth>().TakeDmg(dmgAmount);
+			if (doDmg)
+			{
+				col.gameObject.GetComponent<PlayerHealth>().TakeDmg(dmgAmount);
+			}
 		}
 	}
 
@@ -22,7 +26,10 @@ public class EnemyWeapon : MonoBehaviour {
 		if (col.collider.gameObject.CompareTag("Player") && constDmg)
 		{
 			Debug.Log("Oh no it's poisoned!");
-			col.gameObject.GetComponent<PlayerHealth>().TakeDmg(dmgAmount);
+			if (doDmg)
+			{
+				col.gameObject.GetComponent<PlayerHealth>().TakeDmg(dmgAmount);
+			}
 		}
 	}
 }

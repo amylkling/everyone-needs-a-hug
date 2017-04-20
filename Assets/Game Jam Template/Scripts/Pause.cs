@@ -70,5 +70,9 @@ public class Pause : MonoBehaviour {
 			//canvas.SetActive(true);
 	}
 
-
+	public bool Paused
+	{
+		get {return isPaused;}
+		set {isPaused = value;}
+	}
 }

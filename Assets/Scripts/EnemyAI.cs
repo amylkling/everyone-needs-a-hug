@@ -34,6 +34,8 @@ public class EnemyAI : MonoBehaviour
 	private float smoochTimer = 0f;
 	public float smoochEffectTime = 3f;
 	private bool iLeap = false;
+	public GameControl gm;
+	public float kissScore = 50;
 
 
 	// Use this for initialization
@@ -45,6 +47,7 @@ public class EnemyAI : MonoBehaviour
 		baseCol = GetComponent<Renderer>().material.color;
 		coolTimer = coolDownTime;
 		smoochTimer = smoochEffectTime;
+		gm = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GameControl>();
 	}
 	
 	// Update is called once per frame
@@ -293,6 +296,7 @@ public class EnemyAI : MonoBehaviour
 	void OnParticleCollision(GameObject e)
 	{
 		Smooch(true);
+		gm.Scoreboard(kissScore);
 		Destroy(e);
 	}
 

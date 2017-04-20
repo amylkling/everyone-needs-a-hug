@@ -17,6 +17,7 @@ public class Huggles : MonoBehaviour {
 	bool noMore = false;						//controls activation of group hug
 
 
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -34,6 +35,10 @@ public class Huggles : MonoBehaviour {
 		if (hugSnap && enemy != null)
 		{
 			enemy.Hugged = true;
+			if (gameObject.GetComponent<PlayerHealth>().changeRegen)
+			{
+				gameObject.GetComponent<PlayerHealth>().RegenHealthVar = false;
+			}
 			enemy.TakeDmg(staminaDrainRate * Time.deltaTime);
 			gameObject.GetComponent<PlayerControl>().FinishThem(false);
 			gameObject.GetComponent<PlayerControl>().Kissie(false);
@@ -45,6 +50,10 @@ public class Huggles : MonoBehaviour {
 		}
 		else
 		{
+			if (gameObject.GetComponent<PlayerHealth>().changeRegen)
+			{
+				gameObject.GetComponent<PlayerHealth>().RegenHealthVar = true;
+			}
 			enemy.Hugged = false;
 			gameObject.GetComponent<PlayerControl>().FinishThem(false);
 			gameObject.GetComponent<PlayerControl>().Kissie(true);

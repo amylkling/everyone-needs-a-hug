@@ -130,6 +130,19 @@ public class PlayerControl : MonoBehaviour
 			m_Move *= 0.5f;
 		#endif
 
+		//ensure that the player always remains upright so they can move
+		if (transform.rotation.eulerAngles.x != 0)
+		{
+			Vector3 rot = transform.rotation.eulerAngles;
+			transform.rotation = Quaternion.Euler(0, rot.y, rot.z);
+		}
+
+		if (transform.rotation.eulerAngles.z != 0)
+		{
+			Vector3 rot = transform.rotation.eulerAngles;
+			transform.rotation = Quaternion.Euler(rot.x, rot.y, 0);
+		}
+
 		// pass all parameters to the character control script
 		m_Character.Move (m_Move, hug, groupHug, hugTarget, dodge, blowKiss); //changed crouch to hug and jump to groupHug and added hugTarget and dodge and blowKiss
 		//m_Jump = false;

@@ -71,6 +71,7 @@ public class Enemy : MonoBehaviour {
 			gm.Scoreboard(score);
 			if (weapon != null)
 			{
+				weapon.doDmg = false;
 				weapon.enabled = false;
 			}
 			dead = true;

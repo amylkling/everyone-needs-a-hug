@@ -248,6 +248,7 @@ public class PlayerCharacter : MonoBehaviour
 		{
 			Debug.Log("c'mere everyone, GROUP HUG!! <3");
 			m_GroupHug = true;
+			GetComponent<PlayerHealth>().Invincible = true;
 
 			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Incapacitated");
 
