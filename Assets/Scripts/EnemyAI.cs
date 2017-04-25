@@ -107,7 +107,7 @@ public class EnemyAI : MonoBehaviour
 					activateNav();
 				}
 
-				//reactivate navigation
+				//reactivate navigation if not finished off
 				if (navEngage)
 				{
 					agent.enabled = true;
@@ -135,7 +135,6 @@ public class EnemyAI : MonoBehaviour
 					if (coolTimer <= 0)
 					{
 						attEngage = true;
-						navEngage = true;
 						coolTimer = coolDownTime;
 						theLoop = false;
 					}
@@ -145,7 +144,7 @@ public class EnemyAI : MonoBehaviour
 				if (chargeUp)
 				{
 					chargeTimer -= Time.deltaTime;
-					if (chargeTimer <= chargeTime && chargeTimer > firstThreshold)
+					/*if (chargeTimer <= chargeTime && chargeTimer > firstThreshold)
 					{
 						//flash at a slow speed
 						//Debug.Log("Time: " + chargeTimer + " HRAA-");
@@ -167,8 +166,8 @@ public class EnemyAI : MonoBehaviour
 						//Debug.Log("Time: " + chargeTimer + " -AAAAAAAAAAAA");
 						ChargeUp("fastest", 0.5f);
 						//Debug.Log("-AAAAAAAAAAAA");
-					} 
-					else if (chargeTimer <= 0)
+					} */
+					 if (chargeTimer <= 0)
 					{
 						chargeUp = false;
 						chargeTimer = chargeTime;
@@ -195,7 +194,14 @@ public class EnemyAI : MonoBehaviour
 				}
 			}
 		}
+		else
+		{
 
+			if (gameObject.GetComponent<Enemy>().Finished)
+			{
+				agent.enabled = false;
+			}
+		}
 		/*
 		//back off when it gets too close
 		if (agent.remainingDistance <= agent.stoppingDistance && !GetComponent<Enemy>().Hugged)
@@ -277,6 +283,7 @@ public class EnemyAI : MonoBehaviour
 		theLoop = true;
 		pathPlacement = true;
 		iLeap = false;
+		navEngage = true;
 	}
 
 	//compare two vector3's

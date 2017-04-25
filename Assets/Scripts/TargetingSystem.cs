@@ -9,7 +9,7 @@ namespace UnityStandardAssets.Cameras
 		private GameObject camera;
 		public GameObject[] enemies;
 		public bool toggle = false;
-		private int count = -1;
+		//private int count = -1;
 		public GameObject closestEnemy;
 		private GameObject player;
 		private bool inRange;
@@ -29,11 +29,18 @@ namespace UnityStandardAssets.Cameras
 			enemies = GameObject.FindGameObjectsWithTag("Enemy");
 			DetermineClosest();
 
+
 			if (Input.GetButtonDown("Fire1"))
 			{
-				//tell the camera's look at script to target the closest enemy
-				camera.GetComponent<LookatTarget>().SetTarget(closestEnemy.transform);
-
+				//tell the camera's look at script to target the closest enemy that isn't incapacitated
+				if (closestEnemy != null && enemies.GetLength(0) != 0)
+				{
+					camera.GetComponent<LookatTarget>().SetTarget(closestEnemy.transform);
+				}
+				else
+				{
+					//play a sound?
+				}
 
 				#region prototype script
 				//cycle targeting through an array of enemies

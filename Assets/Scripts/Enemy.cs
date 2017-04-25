@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour {
 	public Slider healthBar;
 	public EnemyUI uiScript;
 	public EnemyUIDirectControl uiControl;
-	private bool finished = false;
+	[SerializeField]private bool finished = false;
 	private bool hugged = false;
 
 	public float pullInSpeed = 4f;
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour {
 			if (Vector3.Distance(transform.position, player.transform.position) > pullOffsetZ + 0.5f)
 			{
 				transform.position = Vector3.MoveTowards(transform.position, newPos, step);
-				Debug.Log(Vector3.Distance(transform.position, player.transform.position));
+				//Debug.Log(Vector3.Distance(transform.position, player.transform.position));
 			}
 			else
 			{
@@ -150,6 +150,7 @@ public class Enemy : MonoBehaviour {
 	//allow other scripts to set the enemy's state to "finished"
 	public bool Finished
 	{
+		get{return finished;}
 		set{finished = value;}
 	}
 
