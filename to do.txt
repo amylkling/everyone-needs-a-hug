@@ -1,0 +1,14 @@
+to do:
+-tutorial messages
+-story messages
+-after certain rounds of tutorial, popup to go to main game
+-tutorial separate thing (not just an option)
+-decreased damage while hugging
+-somehow fix the stupid collision on walls when hugging
+-ADD SOUND
+-directional prompt (find enemy when off screen)
+-fix the charging thing (halo blink?)
+-change scale of arena so you can't make the controls wonky bc of the camera
+-fix the particle effects with the group hug/blow kiss so the group hug one doesn't show up when it shouldn't and should only appear once
+-space bar why D: (take input out of fixed update)
+-pause menu quit button goes back to main menu

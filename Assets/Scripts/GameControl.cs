@@ -65,8 +65,14 @@ public class GameControl : MonoBehaviour {
 		//find the gameobject that holds all the enemies
 		enemyGroup = GameObject.FindGameObjectWithTag("Holder");
 
+		//keep tabs on if it's in training mode or not
+		if (GameObject.Find("UI") != null)
+		{
+			trainingMode = GameObject.Find("UI").GetComponent<TrainingMode>().TrainingModeCheck;
+		}
+
 		//set the wave counter
-		if (trainingMode != null && trainingMode)
+		if (trainingMode)
 		{
 			waveNumText.text = "Wave: " + roundCountUp.ToString("D") + "/" + "∞";
 		}
@@ -97,7 +103,7 @@ public class GameControl : MonoBehaviour {
 			}
 
 			//if the enemies were training dummies, respawn the set amount of them
-			if (trainingMode != null && trainingMode)
+			if (trainingMode)
 			{
 				for (int i = dummyRespawnCount; i > 0; i--)
 				{
