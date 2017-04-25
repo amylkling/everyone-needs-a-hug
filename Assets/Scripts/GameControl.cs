@@ -43,14 +43,23 @@ public class GameControl : MonoBehaviour {
 		scoreTotal = 0;
 		if (GameObject.Find("UI") != null)
 		{
-			trainingMode = GameObject.Find("UI").GetComponent<TrainingMode>().TrainingModeCheck;
+			trainingMode = GameObject.Find("UI").GetComponent<TrainingOptions>().TrainingMode;
 			pauseScript = GameObject.Find("UI").GetComponent<Pause>();
 		}
-		gameOverPanel = GameObject.Find("GameOverPanel");
-		winText = GameObject.Find("WinText").GetComponent<Text>();
-		loseText = GameObject.Find("LoseText").GetComponent<Text>();
-		finalScoreText = GameObject.Find("Score (Final)").GetComponent<Text>();
-		gameOverPanel.SetActive(false);
+
+		if (!trainingMode)
+		{
+			gameOverPanel = GameObject.Find("GameOverPanel");
+			winText = GameObject.Find("WinText").GetComponent<Text>();
+			loseText = GameObject.Find("LoseText").GetComponent<Text>();
+			finalScoreText = GameObject.Find("Score (Final)").GetComponent<Text>();
+			gameOverPanel.SetActive(false);
+		}
+		else
+		{
+			//set up tutorial and story panels/texts
+			//and the tutorial finished one too
+		}
 		gameOver = false;
 		roundCountDown = wavesNum;
 		gHugMeter = GameObject.Find("GroupHugMeter").GetComponent<Slider>();
@@ -68,7 +77,7 @@ public class GameControl : MonoBehaviour {
 		//keep tabs on if it's in training mode or not
 		if (GameObject.Find("UI") != null)
 		{
-			trainingMode = GameObject.Find("UI").GetComponent<TrainingMode>().TrainingModeCheck;
+			trainingMode = GameObject.Find("UI").GetComponent<TrainingOptions>().TrainingMode;
 		}
 
 		//set the wave counter
@@ -140,6 +149,8 @@ public class GameControl : MonoBehaviour {
 					GameOver(true);
 				}
 			}
+
+			player.GetComponent<Huggles>().NoMore = false;
 		}
 	}
 

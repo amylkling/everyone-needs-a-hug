@@ -247,18 +247,25 @@ public class PlayerCharacter : MonoBehaviour
 		if (groupHug)
 		{
 			Debug.Log("c'mere everyone, GROUP HUG!! <3");
-			m_GroupHug = true;
-			GetComponent<PlayerHealth>().Invincible = true;
 
-			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Incapacitated");
-
-			foreach (GameObject e in enemies)
+			if (!m_GroupHug)
 			{
-				e.GetComponent<Enemy>().Finished = true;
+				GetComponent<PlayerHealth>().Invincible = true;
+
+				GameObject[] enemies = GameObject.FindGameObjectsWithTag("Incapacitated");
+
+				foreach (GameObject e in enemies)
+				{
+					e.GetComponent<Enemy>().Finished = true;
+				}
+
+				gHugParticle = Instantiate(gHugParticlePrefab, new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), Quaternion.identity);
+				gHugParticle.GetComponent<ParticleSystem>().Play();
+
+				m_GroupHug = true;
+				GetComponent<Huggles>().NoMore = true;
 			}
 
-			gHugParticle = Instantiate(gHugParticlePrefab, new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), Quaternion.identity);
-			gHugParticle.GetComponent<ParticleSystem>().Play();
 
 		}
 		else

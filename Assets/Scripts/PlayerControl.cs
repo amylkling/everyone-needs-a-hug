@@ -27,6 +27,7 @@ public class PlayerControl : MonoBehaviour
 	bool pauseMe = false;
 	private float h;
 	private float v;
+	private Vector3 startPosition;
 
 
 
@@ -48,6 +49,8 @@ public class PlayerControl : MonoBehaviour
 		m_Character = GetComponent<PlayerCharacter> ();
 
 		hugTarget = GameObject.FindGameObjectWithTag ("HugTarget");
+
+		startPosition = gameObject.transform.position;
 	}
 
 
@@ -58,7 +61,29 @@ public class PlayerControl : MonoBehaviour
 			m_Jump = CrossPlatformInputManager.GetButtonDown ("Jump");
 		}*/
 
+		if(!pauseMe)
+		{
+			//grouphug input
+			if (CrossPlatformInputManager.GetButtonDown("Jump") && finishThem)
+			{
+				groupHug = true;
+			}
+			else if (CrossPlatformInputManager.GetButtonDown("Jump") && kissie)
+			{
+				blowKiss = true;
+			}
+			else
+			{
+				groupHug = false;
+				blowKiss = false;
+			}
 
+			//reset player position in case of oob
+			if(Input.GetButtonDown("Reset"))
+			{
+				gameObject.transform.position = startPosition;
+			}
+		}
 
 	}
 
@@ -94,20 +119,7 @@ public class PlayerControl : MonoBehaviour
 			}
 		}
 			
-		//grouphug input
-		if (CrossPlatformInputManager.GetButtonDown("Jump") && finishThem)
-		{
-			groupHug = true;
-		}
-		else if (CrossPlatformInputManager.GetButtonDown("Jump") && kissie)
-		{
-			blowKiss = true;
-		}
-		else
-		{
-			groupHug = false;
-			blowKiss = false;
-		}
+
 
 
 
@@ -154,10 +166,11 @@ public class PlayerControl : MonoBehaviour
 		hugControl = b;
 	}
 
-	//for other scripts to set finishThem
-	public void FinishThem(bool b)
+	//for other scripts to access finishThem
+	public bool FinishThem
 	{
-		finishThem = b;
+		get {return finishThem;}
+		set {finishThem = value;}
 	}
 
 	//for other scripts to set kissie

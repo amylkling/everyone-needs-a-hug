@@ -40,12 +40,19 @@ public class Huggles : MonoBehaviour {
 				gameObject.GetComponent<PlayerHealth>().RegenHealthVar = false;
 			}
 			enemy.TakeDmg(staminaDrainRate * Time.deltaTime);
-			gameObject.GetComponent<PlayerControl>().FinishThem(false);
+			gameObject.GetComponent<PlayerControl>().FinishThem = false;
 			gameObject.GetComponent<PlayerControl>().Kissie(false);
 		}
 		else if (enemy == null)
 		{
-			gameObject.GetComponent<PlayerControl>().FinishThem(true);
+			if (!noMore)
+			{
+				gameObject.GetComponent<PlayerControl>().FinishThem = true;
+			}
+			else
+			{
+				gameObject.GetComponent<PlayerControl>().FinishThem = false;
+			}
 			gameObject.GetComponent<PlayerControl>().Kissie(false);
 		}
 		else
@@ -55,7 +62,7 @@ public class Huggles : MonoBehaviour {
 				gameObject.GetComponent<PlayerHealth>().RegenHealthVar = true;
 			}
 			enemy.Hugged = false;
-			gameObject.GetComponent<PlayerControl>().FinishThem(false);
+			gameObject.GetComponent<PlayerControl>().FinishThem = false;
 			gameObject.GetComponent<PlayerControl>().Kissie(true);
 		}
 

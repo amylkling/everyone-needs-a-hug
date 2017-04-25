@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class QuitApplication : MonoBehaviour {
 
@@ -16,5 +17,13 @@ public class QuitApplication : MonoBehaviour {
 		//Stop playing the scene
 		UnityEditor.EditorApplication.isPlaying = false;
 	#endif
+	}
+
+	public void ReturnMainMenu()
+	{
+		//Set time.timescale to 1, this will cause animations and physics to continue updating at regular speed
+		Time.timeScale = 1;
+		SceneManager.LoadScene(0);
+		Destroy(GameObject.Find("UI"));
 	}
 }
