@@ -32,6 +32,9 @@ public class GameControl : MonoBehaviour {
 	public int healthReward = 30;				//amount of health to get back after a group hug
 	public Slider gHugMeter;
 	public Text waveNumText;
+	public AudioSource soundfx;
+	public AudioClip winSound;
+	public AudioClip loseSound;
 
 	// Use this for initialization
 	void Start () 
@@ -66,6 +69,7 @@ public class GameControl : MonoBehaviour {
 		roundCountUp = 1;
 		waveNumText = GameObject.Find("WaveNumber").GetComponent<Text>();
 		waveNumText.text = "Wave: " + roundCountUp.ToString("D");
+		soundfx = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -182,11 +186,13 @@ public class GameControl : MonoBehaviour {
 		//change message depending on circumstance of game over
 		if (win)
 		{
+			soundfx.PlayOneShot(winSound);
 			winText.gameObject.SetActive(true);
 			loseText.gameObject.SetActive(false);
 		}
 		else
 		{
+			soundfx.PlayOneShot(loseSound);
 			winText.gameObject.SetActive(false);
 			loseText.gameObject.SetActive(true);
 		}

@@ -47,6 +47,8 @@ public class PlayerCharacter : MonoBehaviour
 	GameObject kissParticle;
 	public GameObject gHugParticlePrefab;
 	GameObject gHugParticle;
+	public AudioSource soundfx;
+	public AudioClip kiss;
 
 
 	void Start()
@@ -60,6 +62,8 @@ public class PlayerCharacter : MonoBehaviour
 
 		m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 		m_OrigGroundCheckDistance = m_GroundCheckDistance;
+
+		soundfx = GetComponent<AudioSource>();
 	}
 
 
@@ -286,6 +290,7 @@ public class PlayerCharacter : MonoBehaviour
 			Debug.Log("Mwah!");
 			transform.LookAt (new Vector3 (hugTarget.transform.position.x, transform.position.y, hugTarget.transform.position.z));
 			GetComponent<PlayerControl>().PauseMe(true);
+			soundfx.PlayOneShot(kiss);
 			kissParticle = Instantiate(kissParticlePrefab,new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.rotation);
 			kissParticle.GetComponent<ParticleSystem>().Play();
 			GetComponent<PlayerControl>().PauseMe(false);

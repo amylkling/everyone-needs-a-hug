@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour {
 	private bool isRegen = false;
 	public bool changeRegen = true;
 	[SerializeField]private int regenAmt = 1;
+	public AudioSource soundfx;
+	public AudioClip hurt;
 
 	// Use this for initialization
 	void Start () 
@@ -29,6 +31,7 @@ public class PlayerHealth : MonoBehaviour {
 		regen = false;
 		isRegen = false;
 		changeRegen = true;
+		soundfx = GetComponent<AudioSource>();
 	}
 
 	void Update()
@@ -46,6 +49,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		if (!invincible)
 		{
+			soundfx.PlayOneShot(hurt);
 			currentHealth -= dmg;
 
 			if (healthBar != null)

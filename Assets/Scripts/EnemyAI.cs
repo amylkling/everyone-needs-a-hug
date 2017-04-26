@@ -36,7 +36,8 @@ public class EnemyAI : MonoBehaviour
 	private bool iLeap = false;
 	public GameControl gm;
 	public float kissScore = 50;
-
+	public Light halo;
+	public AudioSource soundfx;
 
 	// Use this for initialization
 	void Start () 
@@ -48,6 +49,10 @@ public class EnemyAI : MonoBehaviour
 		coolTimer = coolDownTime;
 		smoochTimer = smoochEffectTime;
 		gm = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GameControl>();
+		halo = GetComponent<Light>();
+		halo.enabled = false;
+		soundfx = GetComponent<AudioSource>();
+		//soundfx.Stop();
 	}
 	
 	// Update is called once per frame
@@ -107,7 +112,7 @@ public class EnemyAI : MonoBehaviour
 					activateNav();
 				}
 
-				//reactivate navigation if not finished off
+				//reactivate navigation
 				if (navEngage)
 				{
 					agent.enabled = true;
@@ -144,30 +149,36 @@ public class EnemyAI : MonoBehaviour
 				if (chargeUp)
 				{
 					chargeTimer -= Time.deltaTime;
-					/*if (chargeTimer <= chargeTime && chargeTimer > firstThreshold)
+					if (chargeTimer <= chargeTime && chargeTimer > firstThreshold)
 					{
 						//flash at a slow speed
 						//Debug.Log("Time: " + chargeTimer + " HRAA-");
-						ChargeUp("slow", 1.5f);
-						//Debug.Log("HRAA-");
+						//ChargeUp("slow", 1f);
+						//call a coroutine to flash the halo at speed
+						StartCoroutine(FlashColor(1f));
+						Debug.Log("HRAA-");
 					} 
 					else if (chargeTimer <= firstThreshold && chargeTimer > secondThreshold)
 					{
 						//flash at a faster speed
 						//iTween.ColorTo(gameObject, flashCol, 1f);
 						//Debug.Log("Time: " + chargeTimer + " -AAAAA-");
-						ChargeUp("faster", 1f);
-						//Debug.Log("-AAAAA-");
+						//ChargeUp("faster", 0.8f);
+						//call a coroutine to flash the halo at speed
+						StartCoroutine(FlashColor(0.8f));
+						Debug.Log("-AAAAA-");
 					} 
 					else if (chargeTimer <= secondThreshold && chargeTimer > 0)
 					{
 						//flash at fastest speed
 						//iTween.ColorTo(gameObject, flashCol, 0.5f);
 						//Debug.Log("Time: " + chargeTimer + " -AAAAAAAAAAAA");
-						ChargeUp("fastest", 0.5f);
-						//Debug.Log("-AAAAAAAAAAAA");
-					} */
-					 if (chargeTimer <= 0)
+						//ChargeUp("fastest", 0.2f);
+						//call a coroutine to flash the halo at speed
+						StartCoroutine(FlashColor(0.5f));
+						Debug.Log("-AAAAAAAAAAAA");
+					} 
+					 else if (chargeTimer <= 0)
 					{
 						chargeUp = false;
 						chargeTimer = chargeTime;
@@ -247,15 +258,21 @@ public class EnemyAI : MonoBehaviour
 		{
 			case "slow":
 				//Debug.Log("slow" + Time.time);
-				iTween.ColorTo(gameObject, flashCol, speed);
+				//iTween.ColorTo(gameObject, flashCol, speed);
+				//call a coroutine to flash the halo at speed
+				StartCoroutine(FlashColor(speed));
 				break;
 			case "faster":
 				//Debug.Log("faster" + Time.time);
-				iTween.ColorTo(gameObject, flashCol, speed);
+				//iTween.ColorTo(gameObject, flashCol, speed);
+				//call a coroutine to flash the halo at speed
+				StartCoroutine(FlashColor(speed));
 				break;
 			case "fastest":
 				//Debug.Log("fastest" + Time.time);
-				iTween.ColorTo(gameObject, flashCol, speed);
+				//iTween.ColorTo(gameObject, flashCol, speed);
+				//call a coroutine to flash the halo at speed
+				StartCoroutine(FlashColor(speed));
 				break;
 		}
 	}
@@ -269,6 +286,7 @@ public class EnemyAI : MonoBehaviour
 			Debug.Log("HYUP");
 			attEngage = false;
 			pathPlacement = false;
+			soundfx.Play();
 			//iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumper"), "time", 2f, "easetype", iTween.EaseType.linear, "oncomplete", "activateNav", "oncompletetarget", gameObject, "looptype", iTween.LoopType.none));
 			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumper"), "time", 2f, "easetype", iTween.EaseType.linear, "looptype", iTween.LoopType.none));
 			iLeap = true;
@@ -280,10 +298,19 @@ public class EnemyAI : MonoBehaviour
 	void activateNav()
 	{
 		Debug.Log("stahp");
+		soundfx.Stop();
 		theLoop = true;
 		pathPlacement = true;
 		iLeap = false;
 		navEngage = true;
+	}
+
+	private IEnumerator FlashColor(float speed)
+	{
+		Debug.Log("don't forget about me, still running over here");
+		halo.enabled = true;
+		yield return new WaitForSeconds(speed);
+		halo.enabled = false;
 	}
 
 	//compare two vector3's

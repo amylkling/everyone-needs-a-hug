@@ -13,6 +13,8 @@ namespace UnityStandardAssets.Cameras
 		public GameObject closestEnemy;
 		private GameObject player;
 		private bool inRange;
+		public AudioSource soundfx;
+		public AudioClip error;
 
 		// Use this for initialization
 		void Start () 
@@ -20,6 +22,7 @@ namespace UnityStandardAssets.Cameras
 			camera = GameObject.FindGameObjectWithTag("MainCamera");
 			enemies = GameObject.FindGameObjectsWithTag("Enemy");
 			player = GameObject.FindGameObjectWithTag("Player");
+			soundfx = camera.GetComponent<AudioSource>();
 		
 		}
 	
@@ -40,6 +43,7 @@ namespace UnityStandardAssets.Cameras
 				else
 				{
 					//play a sound?
+					soundfx.PlayOneShot(error);
 				}
 
 				#region prototype script

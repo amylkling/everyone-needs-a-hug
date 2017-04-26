@@ -4,9 +4,7 @@ to do:
 -after certain rounds of tutorial, popup to go to main game/main menu
 -script tutorial stuff to work properly
 -somehow fix the stupid collision on walls when hugging
--ADD SOUND
 -directional prompt (find enemy when off screen)
--fix the charging thing (halo blink?)
 
 done:
 -space bar why D: (take input out of fixed update)
@@ -16,3 +14,5 @@ done:
 -fix the particle effects with the group hug/blow kiss so the group hug one doesn't show up when it shouldn't and should only appear once
 -tutorial separate thing (not just an option)
 -pause menu quit button goes back to main menu
+-fix the charging thing (halo blink?) (it has a light that blinks now but it doesn't have a steady pattern)
+-ADD SOUND
