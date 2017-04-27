@@ -36,6 +36,20 @@ public class GameControl : MonoBehaviour {
 	public AudioClip winSound;
 	public AudioClip loseSound;
 
+	public GameObject storyPanel;
+	public GameObject tutorialPanel;
+	public GameObject continuePanel;
+	public Text[] tutorialTexts;
+	public Text tutorialText1;
+	public Text tutorialText2;
+	public Text tutorialText3;
+	public Text tutorialText4;
+	public float tutorialUITime = 20f;
+	private float tutorialUITimer = 0;
+	private bool tutorialActive = false;
+	private bool tutOn = false;
+	private bool tutOff = false;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -50,6 +64,11 @@ public class GameControl : MonoBehaviour {
 			pauseScript = GameObject.Find("UI").GetComponent<Pause>();
 		}
 
+		//for debug/testing training scene
+		#if UNITY_EDITOR
+		trainingMode = true;
+		#endif
+
 		if (!trainingMode)
 		{
 			gameOverPanel = GameObject.Find("GameOverPanel");
@@ -62,6 +81,26 @@ public class GameControl : MonoBehaviour {
 		{
 			//set up tutorial and story panels/texts
 			//and the tutorial finished one too
+			storyPanel = GameObject.Find("StoryPanel");
+			tutorialPanel = GameObject.Find("TutorialPanel");
+			continuePanel = GameObject.Find("ContinuePanel");
+			tutorialText1 = tutorialPanel.transform.GetChild(2).GetComponent<Text>();
+			tutorialText2 = tutorialPanel.transform.GetChild(1).GetComponent<Text>();
+			tutorialText3 = tutorialPanel.transform.GetChild(0).GetComponent<Text>();
+			tutorialText2.enabled = false;
+			tutorialText3.enabled = false;
+			tutorialTexts = new Text[3];
+			tutorialTexts[0] = tutorialText3;
+			Debug.Log(tutorialTexts[0].name + " is loaded!");
+			tutorialTexts[1] = tutorialText2;
+			Debug.Log(tutorialTexts[1].name + " is loaded!");
+			tutorialTexts[2] = tutorialText1;
+			Debug.Log(tutorialTexts[2].name + " is loaded!");
+			tutorialPanel.SetActive(false);
+			continuePanel.SetActive(false);
+			tutorialUITimer = tutorialUITime;
+			//Set time.timescale to 0, this will cause animations and physics to stop updating
+			Time.timeScale = 0;
 		}
 		gameOver = false;
 		roundCountDown = wavesNum;
@@ -84,13 +123,45 @@ public class GameControl : MonoBehaviour {
 			trainingMode = GameObject.Find("UI").GetComponent<TrainingOptions>().TrainingMode;
 		}
 
-		//set the wave counter
+		//for debug/testing training scene
+		#if UNITY_EDITOR
+		//trainingMode = true;
+		#endif
+
+		//set the wave counter and control tutorial/story text
 		if (trainingMode)
 		{
 			waveNumText.text = "Wave: " + roundCountUp.ToString("D") + "/" + "∞";
+
+			//story panel pops up at start
+			//it has a button that links to a function in this script that disables it
+			//once disabled, tutorial text starts popping up and disappearing based on a timer
+			//once the last tutorial text has shown up, the final panel appears to continue the game
+			if (tutorialActive && !tutOn)
+			{
+				tutorialPanel.SetActive(true);
+				StartCoroutine(ShowTutorial());
+			}
+			else if (tutorialActive & tutOff)
+			{
+				tutorialPanel.SetActive(false);
+				//end the tutorial
+				if(Input.GetButtonDown("End"))
+				{
+					//press ` to end tutorial
+					continuePanel.SetActive(true);
+					//Set time.timescale to 0, this will cause animations and physics to stop updating
+					Time.timeScale = 0;
+				}
+			}
+			else if (!tutorialActive)
+			{
+				tutorialPanel.SetActive(false);
+			}
 		}
 		else
 		{
+			tutorialActive = false;
 			waveNumText.text = "Wave: " + roundCountUp.ToString("D") + "/" + (wavesNum + 1).ToString("D");
 		}
 
@@ -214,6 +285,31 @@ public class GameControl : MonoBehaviour {
 		//Set time.timescale to 1, this will cause animations and physics to continue updating at regular speed
 		Time.timeScale = 1;
 		SceneManager.LoadScene(0);
+	}
+
+	public void ContinueTraining()
+	{
+		storyPanel.SetActive(false);
+		tutorialActive = true;
+		//Set time.timescale to 1, this will cause animations and physics to continue updating at regular speed
+		Time.timeScale = 1;
+	}
+
+	private IEnumerator ShowTutorial()
+	{
+		Debug.Log("tutorial on");
+		tutOn = true;
+		//for each tutorial text
+		for (int i = tutorialPanel.transform.childCount; i > 0; i--)
+		{
+			//display it for a certain amount of time
+			tutorialTexts[i-1].enabled = true;
+			yield return new WaitForSeconds(tutorialUITime);
+			tutorialTexts[i-1].enabled = false;
+			Debug.Log("tutorial off");
+		}
+		tutOn = false;
+		tutOff = true;
 	}
 
 	//so other scripts can see if the game is over

@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour
 	public float attackDistHigh = 4f;
 	private float chargeTimer = 0f;
 	public float chargeTime = 5f;
-	private bool chargeUp = true;
+	private bool chargeUp = false;
 	public float firstThreshold = 3f;
 	public float secondThreshold = 1f;
 	public Color flashCol;
@@ -48,11 +48,11 @@ public class EnemyAI : MonoBehaviour
 		baseCol = GetComponent<Renderer>().material.color;
 		coolTimer = coolDownTime;
 		smoochTimer = smoochEffectTime;
+		chargeTimer = chargeTime;
 		gm = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GameControl>();
 		halo = GetComponent<Light>();
 		halo.enabled = false;
 		soundfx = GetComponent<AudioSource>();
-		//soundfx.Stop();
 	}
 	
 	// Update is called once per frame
