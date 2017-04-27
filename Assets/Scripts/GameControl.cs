@@ -44,6 +44,11 @@ public class GameControl : MonoBehaviour {
 	public Text tutorialText2;
 	public Text tutorialText3;
 	public Text tutorialText4;
+	public Text tutorialText5;
+	public Text tutorialText6;
+	public Text tutorialText7;
+	public Text tutorialText8;
+	public Text tutorialText9;
 	public float tutorialUITime = 20f;
 	private float tutorialUITimer = 0;
 	private bool tutorialActive = false;
@@ -84,18 +89,42 @@ public class GameControl : MonoBehaviour {
 			storyPanel = GameObject.Find("StoryPanel");
 			tutorialPanel = GameObject.Find("TutorialPanel");
 			continuePanel = GameObject.Find("ContinuePanel");
-			tutorialText1 = tutorialPanel.transform.GetChild(2).GetComponent<Text>();
-			tutorialText2 = tutorialPanel.transform.GetChild(1).GetComponent<Text>();
-			tutorialText3 = tutorialPanel.transform.GetChild(0).GetComponent<Text>();
+			tutorialText1 = tutorialPanel.transform.GetChild(8).GetComponent<Text>();
+			tutorialText2 = tutorialPanel.transform.GetChild(7).GetComponent<Text>();
+			tutorialText3 = tutorialPanel.transform.GetChild(6).GetComponent<Text>();
+			tutorialText4 = tutorialPanel.transform.GetChild(5).GetComponent<Text>();
+			tutorialText5 = tutorialPanel.transform.GetChild(4).GetComponent<Text>();
+			tutorialText6 = tutorialPanel.transform.GetChild(3).GetComponent<Text>();
+			tutorialText7 = tutorialPanel.transform.GetChild(2).GetComponent<Text>();
+			tutorialText8 = tutorialPanel.transform.GetChild(1).GetComponent<Text>();
+			tutorialText9 = tutorialPanel.transform.GetChild(0).GetComponent<Text>();
 			tutorialText2.enabled = false;
 			tutorialText3.enabled = false;
-			tutorialTexts = new Text[3];
-			tutorialTexts[0] = tutorialText3;
+			tutorialText4.enabled = false;
+			tutorialText5.enabled = false;
+			tutorialText6.enabled = false;
+			tutorialText7.enabled = false;
+			tutorialText8.enabled = false;
+			tutorialText9.enabled = false;
+			tutorialTexts = new Text[9];
+			tutorialTexts[0] = tutorialText9;
 			Debug.Log(tutorialTexts[0].name + " is loaded!");
-			tutorialTexts[1] = tutorialText2;
+			tutorialTexts[1] = tutorialText8;
 			Debug.Log(tutorialTexts[1].name + " is loaded!");
-			tutorialTexts[2] = tutorialText1;
+			tutorialTexts[2] = tutorialText7;
 			Debug.Log(tutorialTexts[2].name + " is loaded!");
+			tutorialTexts[3] = tutorialText6;
+			Debug.Log(tutorialTexts[3].name + " is loaded!");
+			tutorialTexts[4] = tutorialText5;
+			Debug.Log(tutorialTexts[4].name + " is loaded!");
+			tutorialTexts[5] = tutorialText4;
+			Debug.Log(tutorialTexts[5].name + " is loaded!");
+			tutorialTexts[6] = tutorialText3;
+			Debug.Log(tutorialTexts[6].name + " is loaded!");
+			tutorialTexts[7] = tutorialText2;
+			Debug.Log(tutorialTexts[7].name + " is loaded!");
+			tutorialTexts[8] = tutorialText1;
+			Debug.Log(tutorialTexts[8].name + " is loaded!");
 			tutorialPanel.SetActive(false);
 			continuePanel.SetActive(false);
 			tutorialUITimer = tutorialUITime;
@@ -289,8 +318,15 @@ public class GameControl : MonoBehaviour {
 
 	public void ContinueTraining()
 	{
-		storyPanel.SetActive(false);
-		tutorialActive = true;
+		if (storyPanel.activeSelf)
+		{
+			storyPanel.SetActive(false);
+			tutorialActive = true;
+		}
+		else if (continuePanel.activeSelf)
+		{
+			continuePanel.SetActive(false);
+		}
 		//Set time.timescale to 1, this will cause animations and physics to continue updating at regular speed
 		Time.timeScale = 1;
 	}

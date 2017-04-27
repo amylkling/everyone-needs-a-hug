@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour {
 	public GameControl gm;
 	public float score = 100f;
 	EnemyWeapon weapon;
+	public float kissScore = 50;
+	public float kissDmg = 5f;
 	#endregion
 	
 	#region Start
@@ -159,5 +161,16 @@ public class Enemy : MonoBehaviour {
 	{
 		get{return hugged;}
 		set{hugged = value;}
+	}
+
+	//detect when a blown kiss hits the enemy
+	void OnParticleCollision(GameObject e)
+	{
+		if (GetComponent<EnemyAI>() == null)
+		{
+			gm.Scoreboard(kissScore);
+			TakeDmg(kissDmg);
+			Destroy(e);
+		}
 	}
 }

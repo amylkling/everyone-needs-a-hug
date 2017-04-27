@@ -1,10 +1,8 @@
 to do:
--tutorial messages
--story messages
--after certain rounds of tutorial, popup to go to main game/main menu
--script tutorial stuff to work properly
 -somehow fix the stupid collision on walls when hugging
 -directional prompt (find enemy when off screen)
+-fix the hugging so it latches on properly
+-fix the dodging so it actually works in a way that's useful, or get rid of it entirely
 
 done:
 -space bar why D: (take input out of fixed update)
@@ -16,3 +14,7 @@ done:
 -pause menu quit button goes back to main menu
 -fix the charging thing (halo blink?) (it has a light that blinks now but it doesn't have a steady pattern)
 -ADD SOUND
+-after certain rounds of tutorial, popup to go to main game/main menu (changed to be a button the player presses)
+-script tutorial stuff to work properly
+-tutorial messages
+-story messages

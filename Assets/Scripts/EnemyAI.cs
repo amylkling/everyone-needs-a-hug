@@ -38,6 +38,7 @@ public class EnemyAI : MonoBehaviour
 	public float kissScore = 50;
 	public Light halo;
 	public AudioSource soundfx;
+	public float kissDmg = 5f;
 
 	// Use this for initialization
 	void Start () 
@@ -331,6 +332,7 @@ public class EnemyAI : MonoBehaviour
 	{
 		Smooch(true);
 		gm.Scoreboard(kissScore);
+		GetComponent<Enemy>().TakeDmg(kissDmg);
 		Destroy(e);
 	}
 
