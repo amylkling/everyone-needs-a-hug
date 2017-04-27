@@ -71,7 +71,7 @@ public class GameControl : MonoBehaviour {
 
 		//for debug/testing training scene
 		#if UNITY_EDITOR
-		trainingMode = true;
+		//trainingMode = true;
 		#endif
 
 		if (!trainingMode)
@@ -250,7 +250,11 @@ public class GameControl : MonoBehaviour {
 				}
 				else
 				{
-					GameOver(true);
+					if (!gameOver)
+					{
+						StartCoroutine(GameOver(true));
+					}
+
 				}
 			}
 
@@ -267,7 +271,7 @@ public class GameControl : MonoBehaviour {
 
 	//when the game is over, pause everything and display the game over screen
 	//the bool determines which message appears
-	public void GameOver(bool win)
+	public IEnumerator GameOver(bool win)
 	{
 		gameOver = true;
 		if(pauseScript != null)
@@ -298,6 +302,7 @@ public class GameControl : MonoBehaviour {
 		}
 		//show final score
 		finalScoreText.text = "Final " + scoreText.text;
+		yield break;
 	}
 
 	//reset the game back to the main menu

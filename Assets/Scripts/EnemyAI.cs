@@ -38,7 +38,21 @@ public class EnemyAI : MonoBehaviour
 	public float kissScore = 50;
 	public Light halo;
 	public AudioSource soundfx;
+	public AudioClip attack1;
+	public AudioClip attack2;
+	public AudioClip attack3;
+	public AudioClip attack4;
+	public AudioClip attack5;
+	public AudioClip attack6;
+	public AudioClip attack7;
+	public AudioClip attack8;
+	public AudioClip attack9;
+	public AudioClip attack10;
+	public AudioClip attack11;
+	private AudioClip[] attackSounds;
 	public float kissDmg = 5f;
+	public string attackPathName;
+	public iTweenPath path;
 
 	// Use this for initialization
 	void Start () 
@@ -53,7 +67,26 @@ public class EnemyAI : MonoBehaviour
 		gm = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GameControl>();
 		halo = GetComponent<Light>();
 		halo.enabled = false;
+		path = GetComponent<iTweenPath>();
+		attackPathName = "jumper " + Random.Range(1, 100);
+		path.pathName = attackPathName;
+		if(!iTweenPath.paths.ContainsKey(path.pathName))
+		{
+			iTweenPath.paths.Add(path.pathName.ToLower(), path);
+		}
 		soundfx = GetComponent<AudioSource>();
+		attackSounds = new AudioClip[11];
+		attackSounds[0] = attack1;
+		attackSounds[1] = attack2;
+		attackSounds[2] = attack3;
+		attackSounds[3] = attack4;
+		attackSounds[4] = attack5;
+		attackSounds[5] = attack6;
+		attackSounds[6] = attack7;
+		attackSounds[7] = attack8;
+		attackSounds[8] = attack9;
+		attackSounds[9] = attack10;
+		attackSounds[10] = attack11;
 	}
 	
 	// Update is called once per frame
@@ -287,9 +320,11 @@ public class EnemyAI : MonoBehaviour
 			Debug.Log("HYUP");
 			attEngage = false;
 			pathPlacement = false;
-			soundfx.Play();
+
+			int ran = Random.Range(0,attackSounds.Length);
+			soundfx.PlayOneShot(attackSounds[ran]);
 			//iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumper"), "time", 2f, "easetype", iTween.EaseType.linear, "oncomplete", "activateNav", "oncompletetarget", gameObject, "looptype", iTween.LoopType.none));
-			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumper"), "time", 2f, "easetype", iTween.EaseType.linear, "looptype", iTween.LoopType.none));
+			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(attackPathName), "time", 2f, "easetype", iTween.EaseType.linear, "looptype", iTween.LoopType.none));
 			iLeap = true;
 		}
 

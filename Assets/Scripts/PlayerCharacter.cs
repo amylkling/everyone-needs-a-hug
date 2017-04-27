@@ -49,6 +49,7 @@ public class PlayerCharacter : MonoBehaviour
 	GameObject gHugParticle;
 	public AudioSource soundfx;
 	public AudioClip kiss;
+	public AudioClip gHugAudio;
 
 
 	void Start()
@@ -265,6 +266,8 @@ public class PlayerCharacter : MonoBehaviour
 
 				gHugParticle = Instantiate(gHugParticlePrefab, new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), Quaternion.identity);
 				gHugParticle.GetComponent<ParticleSystem>().Play();
+
+				soundfx.PlayOneShot(gHugAudio);
 
 				m_GroupHug = true;
 				GetComponent<Huggles>().NoMore = true;
