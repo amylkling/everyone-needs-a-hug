@@ -10,7 +10,7 @@ Space - Blow a Kiss/Group Hug
 Left Ctrl - Dodge
 Esc - Pause
 Home - Reset Player Position (emergency use)
-` (tilde) - End Tutorial
+G - End Tutorial
 
 How to Play:
 

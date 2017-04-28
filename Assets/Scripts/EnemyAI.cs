@@ -245,6 +245,7 @@ public class EnemyAI : MonoBehaviour
 			if (gameObject.GetComponent<Enemy>().Finished)
 			{
 				agent.enabled = false;
+				GetComponent<Rigidbody>().Sleep();
 			}
 		}
 		/*

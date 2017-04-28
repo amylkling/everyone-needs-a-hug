@@ -82,6 +82,7 @@ public class PlayerControl : MonoBehaviour
 			if(Input.GetButtonDown("Reset"))
 			{
 				gameObject.transform.position = startPosition;
+				GetComponent<Rigidbody>().velocity = Vector3.zero;
 			}
 		}
 

@@ -3,6 +3,7 @@ to do:
 -directional prompt (find enemy when off screen)
 -fix the dodging so it actually works in a way that's useful, or get rid of it entirely
 -change the way the enemy hurts the player (like swing their arms or shove the player back)
+-make kiss particles follow enemy
 
 done:
 -space bar why D: (take input out of fixed update)
@@ -19,3 +20,5 @@ done:
 -tutorial messages
 -story messages
 -fix the hugging so it latches on properly (i guess it's fixed..)
+-fix the group hug enemy movement
+-fix the sound sliders in options
