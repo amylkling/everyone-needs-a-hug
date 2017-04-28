@@ -87,7 +87,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	void Death()
 	{
-		control.GameOver(false);
+		control.StartCoroutine(control.GameOver(false));
 	}
 
 	private IEnumerator RegainHealthOverTime()

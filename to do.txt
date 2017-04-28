@@ -1,8 +1,8 @@
 to do:
 -somehow fix the stupid collision on walls when hugging
 -directional prompt (find enemy when off screen)
--fix the hugging so it latches on properly
 -fix the dodging so it actually works in a way that's useful, or get rid of it entirely
+-change the way the enemy hurts the player (like swing their arms or shove the player back)
 
 done:
 -space bar why D: (take input out of fixed update)
@@ -18,3 +18,4 @@ done:
 -script tutorial stuff to work properly
 -tutorial messages
 -story messages
+-fix the hugging so it latches on properly (i guess it's fixed..)

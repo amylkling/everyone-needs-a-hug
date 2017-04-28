@@ -35,6 +35,7 @@ public class GameControl : MonoBehaviour {
 	public AudioSource soundfx;
 	public AudioClip winSound;
 	public AudioClip loseSound;
+	public GameObject playerHealth;
 
 	public GameObject storyPanel;
 	public GameObject tutorialPanel;
@@ -68,10 +69,11 @@ public class GameControl : MonoBehaviour {
 			trainingMode = GameObject.Find("UI").GetComponent<TrainingOptions>().TrainingMode;
 			pauseScript = GameObject.Find("UI").GetComponent<Pause>();
 		}
+		playerHealth = GameObject.Find("PlayerHealth");
 
 		//for debug/testing training scene
 		#if UNITY_EDITOR
-		//trainingMode = true;
+		trainingMode = true;
 		#endif
 
 		if (!trainingMode)
@@ -169,11 +171,19 @@ public class GameControl : MonoBehaviour {
 			if (tutorialActive && !tutOn)
 			{
 				tutorialPanel.SetActive(true);
+				playerHealth.GetComponent<CanvasGroup>().alpha = 0.5f;
+				gHugMeter.GetComponent<CanvasGroup>().alpha = 0.5f;
+				scoreText.GetComponent<CanvasGroup>().alpha = 0.5f;
+				waveNumText.GetComponent<CanvasGroup>().alpha = 0.5f;
 				StartCoroutine(ShowTutorial());
 			}
 			else if (tutorialActive & tutOff)
 			{
 				tutorialPanel.SetActive(false);
+				playerHealth.GetComponent<CanvasGroup>().alpha = 1f;
+				gHugMeter.GetComponent<CanvasGroup>().alpha = 1f;
+				scoreText.GetComponent<CanvasGroup>().alpha = 1f;
+				waveNumText.GetComponent<CanvasGroup>().alpha = 1f;
 				//end the tutorial
 				if(Input.GetButtonDown("End"))
 				{
@@ -357,5 +367,11 @@ public class GameControl : MonoBehaviour {
 	public bool CheckGameOver
 	{
 		get {return gameOver;}
+	}
+
+	//so other scripts can see if the tutorial is going
+	public bool CheckTutOn
+	{
+		get {return tutOn;}
 	}
 }

@@ -26,7 +26,7 @@ public class EnemyUI : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		//initialize and instantiate
-		canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+		canvas = GameObject.Find("EnemyCanvas").GetComponent<Canvas>();
 		enemyScript = gameObject.GetComponent<Enemy>();
 		healthPanel = Instantiate(healthPrefab) as GameObject;
 		healthPanel.transform.SetParent(canvas.transform, false);
@@ -69,7 +69,10 @@ public class EnemyUI : MonoBehaviour {
 			healthPanel.SetActive(false);
 		}
 
-
+		if (!control.CheckTutOn)
+		{
+			SetAlpha(0.5f);
+		}
 
 	
 	}
