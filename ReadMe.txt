@@ -20,5 +20,7 @@ Chase after the kids and hug them when you get near to deplete their energy. Be 
 
 Credits:
 
+game: Amy Kling
+animation: Amy Kling
 music: www.bensound.com
-sound effects: freesound.org
+sound effects: www.freesound.org

@@ -4,6 +4,7 @@ to do:
 -fix the dodging so it actually works in a way that's useful, or get rid of it entirely
 -change the way the enemy hurts the player (like swing their arms or shove the player back)
 -make kiss particles follow enemy
+-change controls: left click toggle targeting, right click hug?
 
 done:
 -space bar why D: (take input out of fixed update)
